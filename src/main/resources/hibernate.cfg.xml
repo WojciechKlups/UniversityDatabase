@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/university</property>
+        <property name="hibernate.connection.serverTimezone">UCT</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.useSSL">false</property>
+        <property name="hibernate.connection.password">Dupa0987Dupa</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">create</property>
+        <!--<mapping class = "sda.hibernate.model.User"></mapping>-->
+        <!--<mapping class = "sda.hibernate.model.Game"></mapping>-->
+        <!--<mapping class = "sda.hibernate.model.Cart"></mapping>-->
+        <!--&lt;!&ndash; DB schema will be updated if needed &ndash;&gt;-->
+    </session-factory>
+</hibernate-configuration>
