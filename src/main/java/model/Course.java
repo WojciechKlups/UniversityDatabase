@@ -19,6 +19,16 @@ public class Course {
     @OneToMany
     private Set<Teacher> teachers;
 
+    @Override
+    public String toString() {
+        return "Course{" +
+                "course_id=" + course_id +
+                ", course_name='" + course_name + '\'' +
+                ", students=" + students +
+                ", teachers=" + teachers +
+                '}';
+    }
+
     public int getCourse_id() {
         return course_id;
     }

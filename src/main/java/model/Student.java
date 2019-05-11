@@ -17,12 +17,20 @@ public class Student {
     private String lastname;
     private int age;
 
-    public Student(String name, String lastname) {
-        this.name = name;
-        this.lastname = lastname;
+    @Override
+    public String toString() {
+        return "Student{" +
+                "student_id=" + student_id +
+                ", name='" + name + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", age=" + age +
+                '}';
     }
 
-    public Student() {
+    public Student(String name, String lastname, int age) {
+        this.name = name;
+        this.lastname = lastname;
+        this.age = age;
     }
 
     public int getStudent_id() {

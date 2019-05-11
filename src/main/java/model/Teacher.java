@@ -16,6 +16,17 @@ public class Teacher {
     @ManyToOne
     private Division division;
 
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "teacher_id=" + teacher_id +
+                ", name='" + name + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", age=" + age +
+                ", division=" + division +
+                '}';
+    }
+
     public int getTeacher_id() {
         return teacher_id;
     }

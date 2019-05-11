@@ -14,6 +14,14 @@ public class Division {
 
     private String div_name;
 
+    @Override
+    public String toString() {
+        return "Division{" +
+                "div_id=" + div_id +
+                ", div_name='" + div_name + '\'' +
+                '}';
+    }
+
     public int getDiv_id() {
         return div_id;
     }
