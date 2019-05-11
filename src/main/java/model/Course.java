@@ -1,6 +1,7 @@
 package model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 
 @Entity
@@ -13,10 +14,10 @@ public class Course {
     private String course_name;
 
     @OneToMany
-    private Student student;
+    private Set<Student> students;
 
     @OneToMany
-    private Teacher teacher;
+    private Set<Teacher> teachers;
 
     public int getCourse_id() {
         return course_id;
@@ -32,13 +33,5 @@ public class Course {
 
     public void setCourse_name(String course_name) {
         this.course_name = course_name;
-    }
-
-    public Student getStudent() {
-        return student;
-    }
-
-    public void setStudent(Student student) {
-        this.student = student;
     }
 }

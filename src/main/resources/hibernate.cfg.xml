@@ -13,9 +13,10 @@
         <property name="hibernate.connection.password">Dupa0987Dupa</property>
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">create</property>
-        <!--<mapping class = "model.Division"></mapping>-->
+        <mapping class = "model.Division"></mapping>
         <mapping class = "model.Student"></mapping>
-        <!--<mapping class = "model.Teacher"></mapping>-->
+        <mapping class = "model.Teacher"></mapping>
+        <mapping class = "model.Course"></mapping>
         <!-- DB schema will be updated if needed -->
     </session-factory>
 </hibernate-configuration>
