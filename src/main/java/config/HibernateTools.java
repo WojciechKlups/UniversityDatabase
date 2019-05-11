@@ -6,16 +6,17 @@ import org.hibernate.cfg.Configuration;
 
 public class HibernateTools {
 
-    private final static SessionFactory sf = new Configuration()
-            .configure()
-            .buildSessionFactory();
-
-    private static Session session = sf.openSession();
-
-    public static Session getSession() {
-        if (session == null) {
-            session = (Session) new HibernateTools();
-        }
-        return session;
+    public static SessionFactory sessionFactoryBuilder() {
+        final SessionFactory sf = new Configuration()
+                .configure()
+                .buildSessionFactory();
+        return sf;
     }
-}
+    public static Session sessionOpener() {
+        Session session = sessionFactoryBuilder().openSession();
+            if (session == null) {
+                session = (Session) new HibernateTools();
+            }
+            return session;
+        }
+    }
