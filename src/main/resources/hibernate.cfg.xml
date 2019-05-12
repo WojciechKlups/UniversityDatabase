@@ -12,7 +12,7 @@
         <property name="hibernate.connection.useSSL">false</property>
         <property name="hibernate.connection.password">Dupa0987Dupa</property>
         <property name="show_sql">true</property>
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
         <mapping class = "model.Division"></mapping>
         <mapping class = "model.Student"></mapping>
         <mapping class = "model.Teacher"></mapping>

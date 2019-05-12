@@ -27,10 +27,7 @@ public class Student {
                 '}';
     }
 
-    public Student(String name, String lastname, int age) {
-        this.name = name;
-        this.lastname = lastname;
-        this.age = age;
+    public Student() {
     }
 
     public int getStudent_id() {
