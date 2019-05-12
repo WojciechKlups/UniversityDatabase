@@ -7,7 +7,9 @@ public class MainApp {
         System.out.println(HibernateTools.sessionFactoryBuilder().openSession());
         StudentCRUD student = new StudentCRUD();
 
-        student.addStudent();
+    //    student.addStudent();
+      student.printStudents();
+      student.updateStudentName();
       student.printStudents();
     }
 }

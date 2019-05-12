@@ -68,8 +68,6 @@ public class StudentCRUD {
     //Update
     public void updateStudentName(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter students id to update:");
-        int student_id = scan.nextInt();
         Session session = HibernateTools
                 .sessionOpener()
                 .getSession();
@@ -77,9 +75,12 @@ public class StudentCRUD {
 
         try {
             tx = session.beginTransaction();
-            Student student = session.get(Student.class, student_id);
+            System.out.println("Enter students id to update:");
+            int student_id = scan.nextInt();
+            scan.nextLine();
             System.out.println("Enter updated name:");
             String name = scan.nextLine();
+            Student student = session.get(Student.class, student_id);
             student.setName(name);
                 session.update(student);
                 tx.commit();
