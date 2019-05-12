@@ -57,6 +57,7 @@ public class StudentCRUD {
         }
     }
 
+    //TODO - add other parameters updates
     //Update
     public void updateStudentName(){
         Scanner scan = new Scanner(System.in);
@@ -79,6 +80,17 @@ public class StudentCRUD {
 
         } catch (HibernateException e) {
             e.printStackTrace();
+        }
+    }
+    //TODO - finish delete section
+    //Delete
+    public void deleteStudent(){
+        Scanner scan = new Scanner(System.in);
+
+        try (Session session = HibernateTools
+                .sessionOpener()
+                .getSession()) {
+            Transaction tx = session.beginTransaction();
         }
     }
 }
