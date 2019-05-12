@@ -40,7 +40,7 @@ public class StudentCRUD {
     }
 
     //Read
-    public static void printStudents(){
+    public void printStudents(){
         Session session = HibernateTools
                 .sessionOpener()
                 .getSession();
