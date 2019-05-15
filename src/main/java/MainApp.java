@@ -8,7 +8,7 @@ public class MainApp {
         StudentCRUD student = new StudentCRUD();
 
         student.printStudents();
-        student.addStudent();
+        student.deleteStudent();
         student.printStudents();
         // student.updateStudentName();
     }

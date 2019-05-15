@@ -35,7 +35,7 @@ public class StudentCRUD {
     }
 
     //Read
-    public void printStudents(){
+    public void printStudents() {
 
         try (Session session = HibernateTools
                 .sessionOpener()
@@ -59,7 +59,7 @@ public class StudentCRUD {
 
     //TODO - add other parameters updates
     //Update
-    public void updateStudentName(){
+    public void updateStudentName() {
         Scanner scan = new Scanner(System.in);
 
         try (Session session = HibernateTools
@@ -82,15 +82,25 @@ public class StudentCRUD {
             e.printStackTrace();
         }
     }
-    //TODO - finish delete section
+
     //Delete
-    public void deleteStudent(){
+    public void deleteStudent() {
         Scanner scan = new Scanner(System.in);
 
         try (Session session = HibernateTools
                 .sessionOpener()
                 .getSession()) {
             Transaction tx = session.beginTransaction();
+            System.out.println("Enter students id to delete:");
+            int student_id = scan.nextInt();
+            scan.nextLine();
+            Student student = session.get(Student.class, student_id);
+            session.delete(student);
+            if (tx != null) {
+                tx.commit();
+            }
+        } catch (HibernateException e) {
+            e.printStackTrace();
         }
     }
 }
