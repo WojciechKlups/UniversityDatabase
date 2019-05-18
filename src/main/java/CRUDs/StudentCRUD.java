@@ -109,7 +109,7 @@ public class StudentCRUD {
     }
 
     //DELETE
-    
+
     public void deleteStudent() {
         Scanner scan = new Scanner(System.in);
 

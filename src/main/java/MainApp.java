@@ -7,6 +7,8 @@ public class MainApp {
         System.out.println(HibernateTools.sessionFactoryBuilder().openSession());
         StudentCRUD student = new StudentCRUD();
 
+        //TODO - implement menu to MainApp
+
         student.printStudents();
         student.updateStudentData();
         student.printStudents();
