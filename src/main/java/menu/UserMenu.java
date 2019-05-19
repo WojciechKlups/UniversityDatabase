@@ -17,6 +17,8 @@ public class UserMenu {
         switch (userInput) {
             case 1:
                 System.out.println("What data you want to edit? [1]Add student, [2]View all students, [3]Update student's data, [4]Delete student");
+                userInput = scan.nextInt();
+                scan.nextLine();
                 switch (userInput) {
                     case 1:
                         student.addStudent();
