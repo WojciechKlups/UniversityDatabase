@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class UserMenu {
 
-    public void userMenuDisplayer() {
+    public static void userMenuDisplayer() {
         Scanner scan = new Scanner(System.in);
         StudentCRUD student = new StudentCRUD();
         int userInput = 0;
@@ -35,12 +35,10 @@ public class UserMenu {
                 }
                 break;
             case 2:
-                System.out.println("Work in progress");
-                break;
             case 3:
-                System.out.println("Work in progress");
             case 4:
                 System.out.println("Work in progress");
+                break;
         }
     }
 }
