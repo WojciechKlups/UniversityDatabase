@@ -52,6 +52,31 @@ public class DivisionCRUD {
         }
     }
     //UPDATE
+
+    public void updateDivisionsData() {
+        Scanner scan = new Scanner(System.in);
+
+        try (Session session = HibernateTools
+                .sessionOpener()
+                .getSession()) {
+            Transaction tx = session.beginTransaction();
+            System.out.println("Enter divisions id to update:");
+            int div_id = scan.nextInt();
+            scan.nextLine();
+            System.out.println("You can update name only");
+            System.out.println("Enter updated name:");
+            String name = scan.nextLine();
+            Division division = session.get(Division.class, div_id);
+            division.setDiv_name(name);
+            session.update(division);
+
+            if (tx != null) {
+                tx.commit();
+            }
+        } catch (HibernateException e) {
+            e.printStackTrace();
+        }
+        }
+    }
     //DELETE
 
-}
