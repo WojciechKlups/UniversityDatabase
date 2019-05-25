@@ -76,7 +76,27 @@ public class DivisionCRUD {
         } catch (HibernateException e) {
             e.printStackTrace();
         }
-        }
     }
     //DELETE
+
+    public void deleteDivision() {
+        Scanner scan = new Scanner(System.in);
+
+        try (Session session = HibernateTools
+                .sessionOpener()
+                .getSession()) {
+            Transaction tx = session.beginTransaction();
+            System.out.println("Enter divisions id to delete:");
+            int div_id = scan.nextInt();
+            scan.nextLine();
+            Division division = session.get(Division.class, div_id);
+            session.delete(division);
+            if (tx != null) {
+                tx.commit();
+            }
+        } catch (HibernateException e) {
+            e.printStackTrace();
+        }
+    }
+}
 
